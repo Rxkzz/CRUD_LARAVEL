@@ -11,14 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        {
-            Schema::create('posts', function (Blueprint $table) {
-            $table->id();
-            $table->string('title');
-            $table->text('body');
-            $table->timestamps();
-            });
-            }
+        Schema::table('posts', function (Blueprint $table) {
+            $table->string('title')->nullable();
+        });
+        
     }
 
     /**
@@ -26,6 +22,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::table('posts', function (Blueprint $table) {
+            //
+        });
     }
 };

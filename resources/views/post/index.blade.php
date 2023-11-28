@@ -13,6 +13,9 @@ integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6
     <div class="container-fluid">
       <a class="navbar-brand h1" href={{ route('posts.index') }}>CRUDPosts</a>
       <div class="justify-end ">
+        <div>
+          <a class="btn btn-sm btn-danger" href={{ route('home') }}>back</a>
+        </div>
         <div class="col ">
           <a class="btn btn-sm btn-success" href={{ route('posts.create') }}>Add Post</a>
         </div>
@@ -22,7 +25,7 @@ integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6
   <div class="container mt-5">
     <div class="row">
       @foreach ($posts as $post)
-        <div class="col-3">
+        <div class="col-2">
           <div class="card">
             <div class="card-header">
               <h5 class="card-title">{{ $post->title }}</h5>
